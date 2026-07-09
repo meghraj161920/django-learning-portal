@@ -1,4 +1,6 @@
 from django.urls import path
 
-app_name = 'bookmarks'
-urlpatterns = []
+app_name = "bookmarks"
+
+urlpatterns = [
+]

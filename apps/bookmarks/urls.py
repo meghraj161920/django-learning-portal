@@ -1,4 +1,12 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
+from .views import BookmarkViewSet
 
-app_name = 'bookmarks_api'
-urlpatterns = []
+router = DefaultRouter()
+
+router.register(
+    "bookmarks",
+    BookmarkViewSet,
+    basename="bookmark"
+)
+
+urlpatterns = router.urls
