@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}{{ course.title }}{% endblock %}
+{% block content %}
+<div class="container py-4">
+    <h1>{{ course.title }}</h1>
+    <p class="lead">{{ course.subtitle }}</p>
+    <div class="mb-3">
+        <span class="badge bg-secondary text-capitalize">{{ course.difficulty }}</span>
+        <span class="badge bg-primary">{{ course.category.name }}</span>
+    </div>
+    <p>{{ course.description|linebreaks }}</p>
+    <h3 class="mt-4">Lessons</h3>
+    <div class="list-group">
+        {% for lesson in course.lessons.all %}
+        <div class="list-group-item">
+            <span class="badge bg-light text-dark me-2">{{ lesson.order }}</span>
+            {{ lesson.title }}
+        </div>
+        {% empty %}
+        <p>No lessons available yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
