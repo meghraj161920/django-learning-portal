@@ -1,4 +1,4 @@
 from django.urls import path
 
-app_name = 'accounts_api'
+app_name = 'accounts'
 urlpatterns = []
