@@ -9,4 +9,3 @@ class CustomUserAdmin(UserAdmin):
     )
     list_display = ['username', 'email', 'role', 'is_staff', 'date_joined']
     list_filter = ['role', 'is_staff', 'is_superuser', 'email_verified']
-# Register your models here.

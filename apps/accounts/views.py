@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from django.contrib.auth.views import LoginView as BaseLoginView, LogoutView as BaseLogoutView
@@ -78,5 +77,3 @@ class PublicProfileView(DetailView):
     slug_field = 'username'
     slug_url_kwarg = 'username'
     context_object_name = 'profile_user'
-
-# Create your views here.
